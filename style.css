@@ -1,0 +1,39 @@
+body{
+  background-color: white;
+  color: black;
+  font-family: 'Hind', sans-serif;
+  font-weight:100;
+}
+
+h1, h2{
+  text-align:center;
+  margin:0px;
+  padding: 0px;
+}
+h1{
+  color:#3a3a3a;
+  line-height: 1em;
+}
+h2{
+  color:#9f9f9f;
+  size: 20px;
+}
+.card{
+  font-weight: 700;
+  border: 1px solid black;
+  width: 190px;
+  height:190px;
+  display: inline-block;
+  padding: 10px;
+}
+
+.card.black{
+  color: white;
+  background-color: black;
+  margin: 5px;
+}
+.card.white{
+  color: black;
+  background-color: white;
+  margin: 5px;
+}
