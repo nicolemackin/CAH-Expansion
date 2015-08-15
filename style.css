@@ -1,8 +1,20 @@
 body{
-  background-color: white;
+  background-color: #e0d8cc;
   color: black;
   font-family: 'Hind', sans-serif;
   font-weight:100;
+}
+
+#header a {
+  Color: #ec8530;
+}
+
+img {
+  height: 3em;
+}
+
+#header {
+  text-align: center;
 }
 
 h1, h2{
@@ -25,6 +37,10 @@ h2{
   height:190px;
   display: inline-block;
   padding: 10px;
+  word-wrap: break-word;
+  font-size: 1em;
+  resize: none;
+  vertical-align: top;
 }
 
 .card.black{
