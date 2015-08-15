@@ -11,6 +11,7 @@
 <p>Please note that once a card is submitted it cannot be changed, so please make you have read <a href="#rules">the rules</a> before submitting anything!
 </p>
 
+<!-- The card creation code -->
 <form method="POST" action="addcard.php">
 
 <script>
@@ -67,14 +68,13 @@
   render_cards($row);
 ?>
 
-<!-- The card creation code -->
 <a name="rules"><h4> Da Rules </h4></a>
 <ul>
   <li>Read the rules</li>
   <li>Don't be a DINK</li>
-  <li>Don't submit content about others without their permission. I will hunt them down and ask them</li>
+  <li>Don't submit content about others without their permission</li>
   <li>Don't make multiple accounts to upvote your own cards</li>
-  <li>Report things that make you uncomfortable so I can manage the content and provide a better experience to all </li>
+  <li>Report things that make you uncomfortable so I can manage the content and provide a better experience to all by contacting Nicole Mackin</li>
   <li>Checked to make sure a similar card has not already been submitted</li>
   <li>Make sure all content is spelled correctly (or as intended) before submission!</li>
 </ul>

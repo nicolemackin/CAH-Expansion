@@ -7,6 +7,7 @@ body{
 
 #header a {
   Color: #ec8530;
+  text-decoration: none;
 }
 
 img {
@@ -15,6 +16,7 @@ img {
 
 #header {
   text-align: center;
+  color:#9f9f9f;
 }
 
 h1, h2{
@@ -41,6 +43,13 @@ h2{
   font-size: 1em;
   resize: none;
   vertical-align: top;
+}
+
+@media print {
+  .card {
+    width: 2in;
+    height:2in;
+  }
 }
 
 .card.black{
