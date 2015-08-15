@@ -1,4 +1,4 @@
-<?
+<?php
 require_once("lib/db.php");
 session_start();
 $name = $_SESSION['login_name'];

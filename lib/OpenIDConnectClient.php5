@@ -218,7 +218,7 @@ class OpenIDConnectClient
 
                 // Save the access token
                 $this->accessToken = $token_json->access_token;
-                
+
                 // Save the refresh token, if we got one
                 if (isset($token_json->refresh_token)) $this->refreshToken = $token_json->refresh_token;
 
@@ -277,8 +277,8 @@ class OpenIDConnectClient
 
         return $this->providerConfig[$param];
     }
-    
-    
+
+
     /**
      * @param $url Sets redirect URL for auth flow
      */
@@ -294,7 +294,7 @@ class OpenIDConnectClient
      * @return string
      */
     public function getRedirectURL() {
-        
+
         // If the redirect URL has been set then return it.
         if (property_exists($this, 'redirectURL') && $this->redirectURL) {
             return $this->redirectURL;
@@ -409,7 +409,7 @@ class OpenIDConnectClient
          }
          throw new OpenIDConnectClientException('Unable to find a key for (algorithm, kid):' . $header->alg . ', ' . $header->kid . ')');
      }
- 
+
 
     /**
      * @param array $keys
@@ -478,7 +478,7 @@ class OpenIDConnectClient
                 $key = $this->get_key_for_header($jwks->keys, $header);
             } else {
                 $key = $this->get_key_for_alg($jwks->keys, 'RSA');
-            }        
+            }
             $verified = $this->verifyRSAJWTsignature($hashtype, $key,
                                                      $payload, $signature);
             break;

@@ -1,4 +1,4 @@
-<?
+<?php
 require_once("lib/db.php");
 $db->exec("
   CREATE TABLE IF NOT EXISTS cards
@@ -39,3 +39,5 @@ $db->exec("
     id TEXT
   );
 ");
+
+?>

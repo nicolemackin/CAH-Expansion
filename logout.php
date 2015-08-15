@@ -1,4 +1,4 @@
-<?
+<?php
 session_start();
 
 // If it's desired to kill the session, also delete the session cookie.

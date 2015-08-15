@@ -1,4 +1,4 @@
-<?
+<?php
   require("lib/header.php");
   require_once("lib/db.php");
   require_once("lib/templates.php");
@@ -49,7 +49,7 @@
 <h4>The Look</h4>
 
 <!-- Card selection code-->
-<?
+<?php
 
   $res = $db->query("
     SELECT * FROM cards WHERE type = 0
@@ -59,7 +59,7 @@
   render_card($row);
 ?>
 <br/>
-<?
+<?php
   $res = $db->query("
     SELECT * FROM cards WHERE type = 1
     LIMIT 3;
@@ -79,6 +79,6 @@
   <li>Make sure all content is spelled correctly (or as intended) before submission!</li>
 </ul>
 
-<?
+<?php
 require("lib/footer.php");
 ?>

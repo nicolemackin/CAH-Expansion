@@ -21,7 +21,7 @@
   }
 </script>
 
-<?
+<?php
 $slctclr = $_GET['color'];
 if($slctclr==="black") {
   $slctblk = "selected";
@@ -77,7 +77,7 @@ else{
     <option value="new"<?= $slctnew?>>New</option>
   </select>
 </form>
-<?
+<?php
 $sql = "SELECT type, text, id FROM cards";
 $var = array();
 if($clr !== "all")

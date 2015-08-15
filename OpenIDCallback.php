@@ -39,7 +39,7 @@ else{
 </form>
 
 
-<?
+<?php
 } //ends else statement
 
 session_start();

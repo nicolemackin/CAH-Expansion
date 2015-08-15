@@ -1,4 +1,4 @@
-<?
+<?php
 require_once("lib/db.php");
 
 #checking Color value
