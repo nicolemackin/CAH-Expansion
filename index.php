@@ -6,6 +6,15 @@
 
 <h3>C-Eng Cards Against Humanity Expansion Set </h3>
 
+<h4>How To</h4>
+<ul>
+  <li> Read <a href="#rules"> Da Rules</a> </li>
+  <li><a href="login.php">Login/Create an Account</a></li>
+  <li>Browse cards and vote for your favourites</li>
+  <li>Make cards referencing popular events of C-Eng history</li>
+  <li>Print off cards and add them to your game!</li>
+</ul>
+</p>
 
 <h4> Create a Card </h4>
 <p>Please note that once a card is submitted it cannot be changed, so please make you have read <a href="#rules">the rules</a> before submitting anything!
@@ -42,10 +51,6 @@
   <button type="submit">Submit</button>
 </form>
 
-
-<h4>The Project</h4>
-<p>This project should allow for a full printable expansion based around Carleton Engineering. A great expansion for game nights of all streams! The project allows students to submit relevent content and upvote those they like most. To sign up, email us your SIN # and banking information, or follow the links in the header by signing in with your Google Account.</p>
-
 <h4>The Look</h4>
 
 <!-- Card selection code-->
@@ -53,7 +58,7 @@
 
   $res = $db->query("
     SELECT * FROM cards WHERE type = 0
-    LIMIT 1;
+    LIMIT 3;
   ");
   $row = $res->fetch();
   render_card($row);
@@ -74,7 +79,7 @@
   <li>Don't be a DINK</li>
   <li>Don't submit content about others without their permission</li>
   <li>Don't make multiple accounts to upvote your own cards</li>
-  <li>Report things that make you uncomfortable so I can manage the content and provide a better experience to all by contacting Nicole Mackin</li>
+  <li>Report things that make you uncomfortable at <a href="mailto:nicole.mackin@carleton.ca?subject=C-ENGAH%20Problems">here</a></li>
   <li>Checked to make sure a similar card has not already been submitted</li>
   <li>Make sure all content is spelled correctly (or as intended) before submission!</li>
 </ul>

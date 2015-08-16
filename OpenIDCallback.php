@@ -1,4 +1,4 @@
-<?
+<?php
 require_once("lib/db.php");
 require_once("lib/OpenIDConnectHelper.php");
 require_once("create.php");

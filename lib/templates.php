@@ -1,6 +1,5 @@
 <?php
 require_once("lib/db.php");
-//session_start();
 
 $vts = $db->prepare("SELECT COUNT(*) FROM votes
 WHERE cardid = ?");
@@ -8,6 +7,7 @@ WHERE cardid = ?");
 function render_card($info) {
 
   global $vts;
+  global $db;
 
   $type = $info['type'];
   $id = $info['id'];
@@ -24,8 +24,21 @@ function render_card($info) {
   $vts ->execute([$id]);
   $votes = $vts->fetch()[0];
 
+    $user = $_SESSION['login_user'];
 
-  echo('</br>'.$votes.'<button class="vote" id="vote" onclick="upvote('.$id.')"> Like </button>');
+    $show = $db->prepare("
+        SELECT COUNT (*) userid FROM votes
+        WHERE cardid = ? AND userid = ?");
+
+    $show->execute([$id,$user]);
+    $visible = $show->fetch()[0];
+
+    if($visible === "0") {
+      if(isset($_SESSION['login_user'])){
+          echo('</br></br>'.$votes.' <button class="vote" id="vote" onclick="upvote('.$id.',this)">Like</button>');
+
+      }
+    }
 
   echo('</div>');
 
@@ -43,7 +56,7 @@ function render_cards($cards) {
 
 <script>
 
-function upvote(cardid) {
+function upvote(cardid, button) {
   var req = new XMLHttpRequest();
   req.open("POST", "/votes.php", true);
   req.setRequestHeader("Content-Type", "application/json");
@@ -55,7 +68,7 @@ function upvote(cardid) {
 		if (req.status != 200)
 			console.log("Error!");
 		console.log(req.responseText);
-		var replace = document.getElementById("vote");
+		var replace = button;
 		replace.innerHTML = req.responseText;
 	}
 }

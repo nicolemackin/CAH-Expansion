@@ -1,4 +1,4 @@
-<?
+<?php
   require("lib/header.php");
   require_once("lib/db.php");
   require_once("lib/templates.php");
